@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형율이네 가족 홈페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS 파일에 없는 상단 메뉴 및 표(Table) 디자인을 추가합니다 */
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #f8f9fa;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        header h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            color: rgb(25, 219, 28);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        /* 가족 소개란을 #hero와 동일한 레이아웃으로 맞추기 위한 설정 */
+        #family .about-me {
+            width: 100%;
+        }
+        #family {
+            display: grid;
+            grid-template-columns: repeat(1, 300px);
+            gap: 2rem;
+            justify-content: flex-start;
+            align-items: start;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            #family {
+                grid-column: 1 / -1;
+                display: flex;
+                justify-content: flex-start;
+                gap: 2rem;
+                margin-top: 2rem;
+
+            }
+        }
+        @media (min-width: 1024px) {
+            #family {
+                grid-column: 1 / -1;
+                display: flex;
+                justify-content: flex-start;
+                gap: 2rem;
+                margin-top: 2rem;
+
+            }
+        }
+        /* 이미지 대체용 박스 스타일 */
+        .img-placeholder {
+            width: 250px;
+            height: 250px;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>형율이네 가족 홈페이지</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">자기소개</a></li>
+                <li><a href="#family">가족소개</a></li>
+                <li><a href="#projects">메뉴</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="background-des"></div>
+
+    <main>
+        <section id="hero">
+            <div class="about-me">
+                <h2>운영자</h2>
+                <table class="operator-table">
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" class="photo-cell">
+                                <span>사진</span>
+                            </td>
+                            <th>이름</th>
+                            <td colspan="2">박순용</td>
+                        </tr>
+                        
+                        <tr>
+                            
+                            <th>생년월일</th>
+                            <td>86.10.15</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>MBTI</th>
+                            <td>INFJ</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>취미</th>
+                            <td>독서</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="family">
+
+            <div class="about-me">
+                <h2>가족 사항</h2>
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>사진</th>
+                            <th>구분</th>
+                            <th>이름</th>
+                            <th>나이</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" class="photo-cell">
+                                <span>사진</span>
+                            </td>
+                            <td>아빠</td>
+                            <td>박순용</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>엄마</td>
+                            <td>김아람</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>첫째</td>
+                            <td>박형율</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>둘째</td>
+                            <td>막내</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="work-cont" style="grid-column: 1 / -1; width: 100%;">
+            <h2 class="title">My Space</h2>
+            <section id="projects" style="display: flex; flex-direction: row; gap: 2rem; margin-top: 1.5rem; width: 100%;">
+                <div class="project" id="todo" style="flex: 1; width: auto;">
+                    <div class="project-image img-placeholder" style="width: 100%; height: 150px;">게시판 썸네일</div>
+                    <h3>게시판</h3>
+                    <p>자유롭게 이야기를 나누는 공간입니다.</p>
+                </div>
+
+                <div class="project" id="weather" style="flex: 1; width: auto;">
+                    <div class="project-image img-placeholder" style="width: 100%; height: 150px;">추억 썸네일</div>
+                    <h3>추억</h3>
+                    <p>가족과의 소중한 기억을 보관합니다.</p>
+                </div>
+
+                <div class="project" id="tictactoe" style="flex: 1; width: auto;">
+                    <div class="project-image img-placeholder" style="width: 100%; height: 150px;">게임 썸네일</div>
+                    <h3>게임</h3>
+                    <p>가볍게 즐길 수 있는 미니 게임입니다.</p>
+                </div>
+            </section>
+        </div>
+
+        <section id="contact">
+            <div class="contact-me">
+                <h2>Contact Me</h2>
+                <br>
+                <p><strong>Hp :</strong> 010-7777-7777</p>
+                <p><strong>Email :</strong> abc.abc@abc</p>
+                <p><strong>주소 :</strong> 경상남도 김해시</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
